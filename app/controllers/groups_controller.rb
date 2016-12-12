@@ -6,7 +6,6 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
   end
-end
 
   def create
     @group = Group.new(group_params)
@@ -20,3 +19,5 @@ end
   def group_params
     params.require(:group).permit(:title, :description)
   end
+
+end
